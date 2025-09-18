@@ -1,6 +1,7 @@
 import { Suspense } from "react";
-import { Spinner } from "./_components/ui/spinner";
-import Index from "@/app/(features)/(pages)/(landing)/page";
+import { Spinner } from "@/components/ui/spinner";
+import { Header } from "@/components/header";
+import { ServiceSection } from "@/components/services-section";
 
 
 const PageLoading = () => {
@@ -8,18 +9,26 @@ const PageLoading = () => {
     <div className='min-h-screen flex justify-center items-center'>
       <div>
         <Spinner />
-        <div className='text-sm  font-medium mt-2'>Loading...</div>
+        <div className='font-medium mt-4'>Loading...</div>
       </div>
     </div>
   )
 }
 
-export default function Home() {
+
+const Page = () => {
   return (
     <>
       <Suspense fallback={<PageLoading />}>
-        <Index />
+        <Header />
+        <ServiceSection />
+        {/* <PageLoading /> */}
       </Suspense>
     </>
   );
 }
+
+
+
+
+export default Page;

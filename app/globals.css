@@ -4,13 +4,30 @@
 
 @theme {
   --font-poppins: 'Poppins', sans-serif;
-  --font-gilroy: 'Gilroy', sans-serif;
-  --color-primary: #020021;
+
+  --color-primary: #710100;
   --color-primary-foreground: #fff;
   --color-accent-foreground: #6b7280;
-  --color-accent: #e7e7e7;
-  --color-border: #e5e7eb;
+  --color-accent: #f5f4f4;
+  /* --color-border: #e5e7eb; */
   --color-privacy-foreground: #bcbdd4;
+
+
+  --primary: #A02030;
+  /* Deeper, richer red */
+  --secondary: #1A1A1A;
+  /* Very dark gray, almost black */
+  --accent: #FF5722;
+  /* Vibrant orange */
+  --bg: #F5F5F5;
+  /* Soft off-white/light gray */
+  --text: #333333;
+  /* Dark gray for main text */
+  --card-bg: #FFFFFF;
+  /* Pure white for cards */
+  --muted: #7F7F7F;
+  /* Medium gray for secondary text */
+  --font-family: 'Inter', sans-serif;
 }
 
 html {
