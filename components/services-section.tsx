@@ -73,7 +73,8 @@ const data: Array<ServiceType> = [
 export const ServiceSection = () => {
     return (
         // https://diffco.us/wp-content/themes/diffconew/static-template/build/images/services-v4/first-bg@2x.jpg
-        <div className=" text-black min-h-screen bg-[url('https://diffco.us/wp-content/themes/diffconew/static-template/build/images/services-v4/first-bg@2x.jpg')]">
+        //  bg-[url('https://diffco.us/wp-content/themes/diffconew/static-template/build/images/services-v4/first-bg@2x.jpg')]
+        <div className=" text-black min-h-screen bg-[#fff5e6]">
             <div className="px-4 py-16 max-w-7xl mx-auto lg:px-8">
                 <div className="mb-16 text-center">
                     <h2 className="font-semibold text-4xl font-poppins">
@@ -82,8 +83,8 @@ export const ServiceSection = () => {
                 </div>
 
                 <div className="mb-16">
-                     {/* lg:grid-cols-2  */}
-                    <div className="grid grid-cols-1gap-4">
+                    {/* lg:grid-cols-2  */}
+                    <div className="grid grid-cols-2 gap-2">
                         {data.map((service, index) => (
                             <ServiceCard key={index} {...service} />
                         ))}
@@ -178,21 +179,16 @@ export const ServiceSection = () => {
 
 const ServiceCard: React.FC<ServiceType> = (props) => {
     return (
-        <div className="group bg-white p-8 rounded-lg cursor-pointer shadow-md mb-4">
+        <div className="group bg-white p-8 rounded-lg cursor-pointer">
 
             <div className="md:flex md:flex-row-reverse md:gap-6 items-start">
                 <div
                     className="mb-4 md:mb-0 md:shrink-0 flex justify-center md:justify-end relative"
                 >
 
-                    <div className='w-[35rem] absolute '>
-                        <DotLottieReact
-                            src="/animations/frontend-card.lottie.json"
-                            loop
-                            autoplay
-                        />
+                    <div >
+                        <img src="https://diffco.us/wp-content/uploads/2024/08/s-1.svg" alt="" className='h-48 w-48' />
                     </div>
-
                 </div>
 
                 <div className="flex-1">
@@ -209,7 +205,7 @@ const ServiceCard: React.FC<ServiceType> = (props) => {
                 {props.languages.map((val, index) => (
                     <div
                         key={index}
-                        className="rounded-full px-3 py-2 text-xs font-semibold bg-accent"
+                        className="rounded-full px-3 py-1 text-xs bg-accent"
                     >
                         {val}
                     </div>
@@ -217,13 +213,13 @@ const ServiceCard: React.FC<ServiceType> = (props) => {
             </div>
 
             <div className="space-x-2 pt-2">
-                <button className="text-sm bg-primary text-primary-foreground px-4 py-2 rounded-md font-semibold cursor-pointer border-1 ">
+                <button className="text-xs bg-[#252b2b] text-primary-foreground px-4 py-2 rounded-md font-semibold cursor-pointer border-1 ">
                     Let's Chat
                 </button>
                 {
                     props.link &&
                     <Link href={props.link}>
-                        <button className="text-sm border border-gray-400 text-gray-600 px-4 py-2 rounded-md font-semibold">
+                        <button className="text-xs border border-gray-400 text-gray-600 px-4 py-2 rounded-md font-semibold">
                             Learn more
                         </button>
                     </Link>
