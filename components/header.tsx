@@ -1,33 +1,20 @@
 import Link from "next/link";
-import { navItems } from "@/global";
+// import { navItems } from "@/global";
 import { Brand } from "./brand";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 
 export const Header = () => {
     return (
-        <header className="shadow-md">
+        <header className="">
             <div className="flex items-center justify-between max-w-6xl mx-auto py-4 px-2">
                 <div className="flex items-center">
                     <Brand />
 
                     <div className="flex items-center gap-6 ml-8">
+                        <Link href="/about" className="text-sm cursor-pointer font-medium">About us</Link>
+                        <Link href="/services" className="text-sm cursor-pointer font-medium">Services</Link>
 
-                        <Link
-
-                            href="/about"
-                            className="text-sm cursor-pointer font-medium"
-                        >
-                            About us
-                        </Link>
-                        <Link
-
-                            href="/services"
-                            className="text-sm cursor-pointer font-medium"
-                        >
-                            Services
-                        </Link>
-
-                        <Popover >
+                        <Popover>
                             <PopoverTrigger asChild>
                                 <div className="text-sm cursor-pointer font-medium">Products</div>
                             </PopoverTrigger>
@@ -35,16 +22,13 @@ export const Header = () => {
                                 <div>Point Of Sale</div>
                                 <div>UnityStore </div>
                                 <div>UnityAlgo Finance</div>
-                                   <div>UnityAI For ERPNext</div>
+                                <div>UnityAI For ERPNext</div>
                             </PopoverContent>
                         </Popover>
-                        <Link
-                            href="/contacts"
-                            className="text-sm cursor-pointer font-medium"
-                        >
+
+                        <Link href="/contacts" className="text-sm cursor-pointer font-medium">
                             Contact us
                         </Link>
-
                     </div>
 
                 </div>
